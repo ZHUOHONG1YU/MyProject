@@ -47,7 +47,7 @@
             <ol>
                 <li><a href="${pageContext.request.contextPath}/addpersonal.jsp"><input type="button" value="添加信息"></a>
                 <c:if test="${LoginUser.utype==2||LoginUser.utype==1}">
-                <li><a href="${pageContext.request.contextPath}/PersonalAction/findPersonal"><input type="button" value="查看信息"></a>
+                <li><a href="${pageContext.request.contextPath}/personalList.jsp"><input type="button" value="查看信息"></a>
                 </c:if>
             </ol>
         </li>

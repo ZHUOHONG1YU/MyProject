@@ -42,7 +42,7 @@ public class PersonalAction {
             try {
                 //保存文件
                 psimage.transferTo(new File(filePath));
-                personal.setPimage(filePath);
+                personal.setPimage("/images/"+realName);
             }catch (IOException e){
                 e.printStackTrace();
                 return "error";

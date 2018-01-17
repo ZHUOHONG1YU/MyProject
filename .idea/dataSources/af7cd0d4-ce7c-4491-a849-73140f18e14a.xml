@@ -13,126 +13,162 @@
     <schema id="7" parent="1" name="test"/>
     <table id="8" parent="2" name="dept"/>
     <table id="9" parent="2" name="emp"/>
-    <table id="10" parent="2" name="tb_stu"/>
-    <table id="11" parent="2" name="tb_users"/>
-    <column id="12" parent="8" name="dno">
+    <table id="10" parent="2" name="personal"/>
+    <table id="11" parent="2" name="tb_stu"/>
+    <table id="12" parent="2" name="tb_users"/>
+    <column id="13" parent="8" name="dno">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="13" parent="8" name="dname">
+    <column id="14" parent="8" name="dname">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="14" parent="8" name="PRIMARY">
+    <key id="15" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>dno</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="15" parent="9" name="eno">
+    <column id="16" parent="9" name="eno">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="16" parent="9" name="eage">
+    <column id="17" parent="9" name="eage">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="17" parent="9" name="ehobby">
+    <column id="18" parent="9" name="ehobby">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="18" parent="9" name="eintime">
+    <column id="19" parent="9" name="eintime">
       <Position>4</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="19" parent="9" name="ename">
+    <column id="20" parent="9" name="ename">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="20" parent="9" name="esex">
+    <column id="21" parent="9" name="esex">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="9" name="edno">
+    <column id="22" parent="9" name="edno">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="22" parent="9" name="FK7w5kun5qdc5ngtlfe3j72xou9">
+    <index id="23" parent="9" name="FK7w5kun5qdc5ngtlfe3j72xou9">
       <ColNames>edno</ColNames>
     </index>
-    <key id="23" parent="9" name="PRIMARY">
+    <key id="24" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>eno</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="24" parent="9" name="FK7w5kun5qdc5ngtlfe3j72xou9">
+    <foreign-key id="25" parent="9" name="FK7w5kun5qdc5ngtlfe3j72xou9">
       <ColNames>edno</ColNames>
       <RefSchemaName>mytest</RefSchemaName>
       <RefTableName>dept</RefTableName>
       <RefColNames>dno</RefColNames>
     </foreign-key>
-    <column id="25" parent="10" name="sno">
+    <column id="26" parent="10" name="pno">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="26" parent="10" name="sage">
+    <column id="27" parent="10" name="paddress">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="28" parent="10" name="pimage">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="10" name="pintime">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="30" parent="10" name="pname">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="10" name="psex">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="10" name="ptel">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="33" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="11" name="sno">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="11" name="sage">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="10" name="shobby">
+    <column id="36" parent="11" name="shobby">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="28" parent="10" name="sintime">
+    <column id="37" parent="11" name="sintime">
       <Position>4</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="29" parent="10" name="sname">
+    <column id="38" parent="11" name="sname">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="30" parent="10" name="ssex">
+    <column id="39" parent="11" name="ssex">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="31" parent="10" name="PRIMARY">
+    <key id="40" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sno</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="32" parent="11" name="uno">
+    <column id="41" parent="12" name="uno">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="33" parent="11" name="uname">
+    <column id="42" parent="12" name="uname">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="34" parent="11" name="upwd">
+    <column id="43" parent="12" name="upwd">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="35" parent="11" name="ustatus">
+    <column id="44" parent="12" name="ustatus">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="11" name="utype">
+    <column id="45" parent="12" name="utype">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="37" parent="11" name="PRIMARY">
+    <key id="46" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uno</ColNames>
       <Primary>1</Primary>
