@@ -24,7 +24,6 @@ public class UserAction {
     @RequestMapping("/doLogin")
     public String doLogin(Users users, RedirectAttributes attr, HttpSession session){
         //调用服务层方法执行添加业务
-        //调用服务层方法执行添加业务
         users=userService.doLogin(users);
         if(users==null){
             attr.addAttribute("rtype","1");
