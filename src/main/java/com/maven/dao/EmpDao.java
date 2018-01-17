@@ -1,8 +1,6 @@
 package com.maven.dao;
 
 import com.maven.entity.Emp;
-import com.maven.util.PageBean;
-import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -28,16 +26,7 @@ public class EmpDao extends BaseDao{
         return getSession().createQuery(hql).list();
     }
 
-    //分页查询人员
-    public List findEmpList(String hql,PageBean bean){
-        Query query=getSession().createQuery(hql);
-        //设置分页
-        query.setFirstResult((bean.getCpage()-1)*bean.getShowNum());
-        query.setMaxResults(bean.getShowNum());
-        //执行查询
-        List list=query.list();
-        return list;
-    }
+
     //根据Id查询人员
     public Emp getByEmpId(Emp emp){
         return getSession().get(Emp.class, emp.getEno());
