@@ -44,13 +44,4 @@ public class UserService {
         return userDao.findUsersList("from Users");
     }
 
-    //根据用户ID查询信息
-    public Users getUsersById(Users users){
-        return userDao.getUsersById(users);
-    }
-
-    //修改用户
-    public boolean updateUsers(Users users){
-        return userDao.updateUsers(users);
-    }
 }
