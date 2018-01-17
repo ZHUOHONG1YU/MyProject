@@ -2,11 +2,14 @@ package com.maven.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by Administrator on 2017/11/21.
  */
+@Entity
+@Table(name = "personal")
 public class Personal {
     private int pno;
     private String pname;
@@ -31,6 +34,8 @@ public class Personal {
         this.pimage = pimage;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getPno() {
         return pno;
     }
@@ -63,6 +68,7 @@ public class Personal {
         this.ptel = ptel;
     }
 
+    @Column(columnDefinition = "date")
     public Date getPintime() {
         return pintime;
     }

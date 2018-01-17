@@ -31,7 +31,7 @@
         用户状态：<input name="utype" type="radio" value="1">超级管理员
         <input name="utype" type="radio" value="0">普通用户<br/>
         <input type="submit" value="用户注册"/>
-        <a href="index.jsp">取消注册</a>
+        <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="取消注册"></a>
     </form>
 </body>
 </html>

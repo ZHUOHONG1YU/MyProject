@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+<div align="center">
     <h3>用户列表</h3>
         <table id="tab" border="1px gray" width="800px" style="text-align:center">
             <tr>
@@ -19,7 +20,8 @@
                 <td>状态</td><td>类型</td><td>管理</td>
             </tr>
         </table>
-        <a href="main.jsp"><input type="button" value="首页"></a>
+</div>
+        <a href="main.jsp" style="margin: 0px 0px 0px 105px"><input type="button" value="首页"></a>
 </body>
 </html>
 <script type="text/javascript">

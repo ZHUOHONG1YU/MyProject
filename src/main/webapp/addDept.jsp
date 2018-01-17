@@ -27,6 +27,6 @@
         部门名称:<input name="dname"/>
         <input type="submit" value="添加部门"/>
     </form>
-    <a href="${pageContext.request.contextPath}/main.jsp">首页</a>
+    <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="首页"></a>
 </body>
 </html>

@@ -38,7 +38,7 @@
                      </select><br/>
             <input type="submit" value="新员工入职"/>
         </form>
-        <a href="${pageContext.request.contextPath}/empAction/findEmpList">返回员工列表</a>
+        <a href="${pageContext.request.contextPath}/empAction/findEmpList"><input type="button" value="返回员工列表"></a>
 </body>
 </html>
 <script type="text/javascript">

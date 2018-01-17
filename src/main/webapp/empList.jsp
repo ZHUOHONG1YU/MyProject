@@ -15,6 +15,7 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+<div align="center">
         <h2>人员信息列表</h2>
         <div style="font-size: 18px">
             <c:if test="${param.rtype==1}">
@@ -24,7 +25,7 @@
                 <p style="color:red;">删除员工失败!</p>
             </c:if>
         </div>
-        <table border="1" width="1000">
+        <table border="1" width="1000" style="text-align:center">
             <tr>
                 <td>员工编号</td><td>员工姓名</td>
                 <td>员工年龄</td><td>员工性别</td>
@@ -42,6 +43,8 @@
                 </tr>
             </c:forEach>
         </table>
-        <a href="${pageContext.request.contextPath}/main.jsp">首页</a>
+</div>
+        <a href="${pageContext.request.contextPath}/main.jsp" style="margin: 0px 0px 0px 5px">
+            <input type="button" value="首页"></a>
 </body>
 </html>

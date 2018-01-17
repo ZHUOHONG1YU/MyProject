@@ -26,7 +26,7 @@
         密&nbsp;&nbsp;码：<input name="upwd" id="password1"><span></span><br>
         重复密码：<input name="upwd1" id="password2"><span></span><br/>
         <input type="submit" value="用户注册"/>
-        <a href="index.jsp">取消注册</a>
+        <a href="index.jsp"><input type="button" value="取消注册"></a>
     </form>
 </body>
 </html>
