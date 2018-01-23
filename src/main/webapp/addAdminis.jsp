@@ -31,7 +31,7 @@
         重复密码：<input name="upwd1" id="password2"><span></span><br/>
         用户状态：<input name="utype" type="radio" value="2">超级管理员
         <input name="utype" type="radio" value="1">管理员
-        <input name="utype" type="radio" value="0">普通用户<br/>
+        <input name="utype" type="radio" value="0">普通用户<br/><br/>
         <input type="submit" value="用户注册"/>
         <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="取消注册"></a>
     </form>

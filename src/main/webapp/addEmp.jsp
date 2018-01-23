@@ -38,7 +38,7 @@
             入职时间:<input name="eintime"/><br/>
             入职部门:<select name="dno" >
                      <option value="">请选择部门</option>
-                     </select><br/>
+                     </select><br/><br/>
             <input type="submit" value="新员工入职"/>
         </form>
         <a href="${pageContext.request.contextPath}/empAction/findEmpList"><input type="button" value="返回员工列表"></a>

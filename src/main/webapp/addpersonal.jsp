@@ -23,9 +23,9 @@
         联系电话：<input name="ptel"><br/>
         出生日期：<input name="pintime" type="date"><br/>
         家庭地址：<input name="paddress"><br/>
-        用户图像：<input type="file" name="psimage"><br/>
+        用户图像：<input type="file" name="psimage"><br/><br/>
             <input type="submit" value="保存信息">
-            <a href="">取消保存</a>
+            <a href="main.jsp"><input type="button" value="取消保存"></a>
         </form>
         <a href="main.jsp" ><input type="button" value="首页"></a>
     </div>

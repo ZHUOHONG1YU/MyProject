@@ -27,8 +27,8 @@
     <form method="post" action="userAction/addUser" onsubmit="return compare()">
         用户名称：<input name="uname" id="user-name"><span></span><br>
         输入密码：<input name="upwd" id="password1"><span></span><br>
-        重复密码：<input name="upwd1" id="password2"><span></span><br/>
-        <input type="submit" value="用户注册"/>
+        重复密码：<input name="upwd1" id="password2"><span></span><br/><br/>
+        <input style="margin: 0px 0px 0px 80px" type="submit" value="用户注册"/>
         <a href="index.jsp"><input type="button" value="取消注册"></a>
     </form>
 </div>
