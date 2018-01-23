@@ -12,8 +12,10 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-    <div align="center">
-        <h3>信息列表</h3>
+    <div style="padding: 50px 0px 0px 20px; height: 100%; width:100%; background-image: url('${pageContext.request.contextPath}/img/258.jpg')">
+        <div style="height: 60px; padding: 50px 0px 0px 0px;text-align: center">
+            <h3>信息列表</h3>
+        </div>
         <table id="tab" border="1px gray" width="1000px" style="text-align:center">
             <tr>
                 <td>编号</td><td>姓名</td><td>性别</td>
@@ -21,8 +23,8 @@
                 <td>用户头像</td>
             </tr>
         </table>
+        <a href="main.jsp" style="margin: 0px 0px 0px 5px"><input type="button" value="首页"></a>
     </div>
-<a href="main.jsp" style="margin: 0px 0px 0px 5px"><input type="button" value="首页"></a>
 </body>
 </html>
 <script type="text/javascript">

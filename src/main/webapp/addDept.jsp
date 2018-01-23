@@ -13,8 +13,10 @@
 <head>
     <title>addDept</title>
 </head>
-<body>
+<div style="padding: 0px 0px 0px 350px;height: 100%; width:100%;background-image: url('${pageContext.request.contextPath}/img/258.jpg')">
+    <div style="height: 60px; padding: 50px 0px 0px 80px">
     <h2>添加部门</h2>
+    </div>
     <div style="font-size: 18px">
         <c:if test="${param.rtype==1}">
             <p style="color:green;">添加部门成功!</p>
@@ -28,5 +30,6 @@
         <input type="submit" value="添加部门"/>
     </form>
     <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="首页"></a>
+</div>
 </body>
 </html>

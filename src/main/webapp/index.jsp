@@ -15,7 +15,7 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-    <div id="tab" align="center">
+    <div id="tab" align="center" style=" height:100%; width:100%;background-image: url('${pageContext.request.contextPath}/img/147.jpg')">
         <h2>用户登录</h2>
         <c:if test="${param.rtype==1}">
             <p style="color:red;">用户名和密码错误!</p>

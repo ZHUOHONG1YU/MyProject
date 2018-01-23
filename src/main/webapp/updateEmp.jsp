@@ -15,7 +15,10 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+    <div style="padding: 0px 0px 0px 380px; height: 100%; width:100%; background-image: url('${pageContext.request.contextPath}/img/258.jpg')">
+        <div style="height: 60px; padding: 50px 0px 0px 80px">
         <h2>修改员工信息</h2>
+        </div>
         <div style="font-size: 18px">
             <c:if test="${param.rtype==1}">
                 <p style="color:green;">修改员工成功!</p>
@@ -43,6 +46,7 @@
             <input type="submit" value="修改员工"/>
         </form>
         <a href="${pageContext.request.contextPath}/empAction/findEmpList"><input type="button" value="返回员工列表"></a>
+    </div>
 </body>
 </html>
 <script type="text/javascript">

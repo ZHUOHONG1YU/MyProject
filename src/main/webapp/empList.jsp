@@ -15,8 +15,10 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div align="center">
-        <h2>人员信息列表</h2>
+<div style="padding: 50px 0px 0px 50px;height: 100%; width:100%;;background-image: url('${pageContext.request.contextPath}/img/258.jpg')">
+    <div style="height: 60px; padding: 50px 0px 0px 0px;text-align:center ;">
+        <h2>人员信息列表</h2>]
+    </div>
         <div style="font-size: 18px">
             <c:if test="${param.rtype==1}">
                 <p style="color:green;">删除员工成功!</p>
@@ -25,7 +27,7 @@
                 <p style="color:red;">删除员工失败!</p>
             </c:if>
         </div>
-        <table border="1" width="1000" style="text-align:center">
+        <table border="1" width="900" style="text-align:center">
             <tr>
                 <td>员工编号</td><td>员工姓名</td>
                 <td>员工年龄</td><td>员工性别</td>
@@ -43,8 +45,7 @@
                 </tr>
             </c:forEach>
         </table>
+        <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="首页"></a>
 </div>
-        <a href="${pageContext.request.contextPath}/main.jsp" style="margin: 0px 0px 0px 5px">
-            <input type="button" value="首页"></a>
 </body>
 </html>

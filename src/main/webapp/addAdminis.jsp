@@ -9,13 +9,14 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
 <head>
     <title>addAdmins</title>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.2.1.min.js"></script>
 </head>
-    <body>
+    <div style="padding: 0px 0px 0px 380px;height: 100%; width:100%; background-image: url('${pageContext.request.contextPath}/img/258.jpg')">
+    <div style="height: 60px; padding: 50px 0px 0px 80px">
     <h2>用户注册</h2>
+    </div>
     <div style="font-size: 18px">
         <c:if test="${param.rtype==1}">
             <p style="color:green;">添加用户成功!</p>
@@ -25,8 +26,8 @@
         </c:if>
     </div>
     <form method="post" action="userAction/addUser2" onsubmit="return compare()">
-        用户名：&nbsp;<input name="uname" id="user-name"><span></span><br>
-        密&nbsp;&nbsp;码：<input name="upwd" id="password1"><span></span><br>
+        用户名称：<input name="uname" id="user-name"><span></span><br>
+        输入密码：<input name="upwd" id="password1"><span></span><br>
         重复密码：<input name="upwd1" id="password2"><span></span><br/>
         用户状态：<input name="utype" type="radio" value="2">超级管理员
         <input name="utype" type="radio" value="1">管理员
@@ -34,6 +35,9 @@
         <input type="submit" value="用户注册"/>
         <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="取消注册"></a>
     </form>
+    <a href="main.jsp">
+        <input type="button" value="首页"></a>
+    </div>
 </body>
 </html>
 <script type="text/javascript">

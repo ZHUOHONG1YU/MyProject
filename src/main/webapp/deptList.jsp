@@ -12,16 +12,17 @@
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div align="center">
+<div style="padding: 0px 0px 0px 200px;height: 100%; width:100%;background-image: url('img/258.jpg')">
+    <div style="height: 60px; padding: 50px 0px 0px 220px">
     <h2>部门信息列表</h2>
+    </div>
     <table id="tab" border="1" width="600" style="text-align:center">
         <tr>
             <td>编号</td><td>部门名称</td><td>部门人数</td>
         </tr>
     </table>
+    <a href="main.jsp" ><input type="button" value="首页"></a>
 </div>
-<a href="main.jsp" style="margin: 0px 0px 0px 205px">
-    <input type="button" value="首页"></a>
 </body>
 </html>
 <script type="text/javascript">

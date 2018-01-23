@@ -15,19 +15,23 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+<div style="padding: 0px 0px 0px 380px; height: 100%; width:100%; background-image: url('${pageContext.request.contextPath}/img/258.jpg')"">
+    <div style="height: 60px; padding: 50px 0px 0px 80px">
     <h2>用户注册</h2>
+    </div>
     <div>
     <c:if test="${param.rtype==3}">
         <p style="color:red;">填写的数据不能为空!</p>
     </c:if>
     </div>
     <form method="post" action="userAction/addUser" onsubmit="return compare()">
-        用户名：&nbsp;<input name="uname" id="user-name"><span></span><br>
-        密&nbsp;&nbsp;码：<input name="upwd" id="password1"><span></span><br>
+        用户名称：<input name="uname" id="user-name"><span></span><br>
+        输入密码：<input name="upwd" id="password1"><span></span><br>
         重复密码：<input name="upwd1" id="password2"><span></span><br/>
         <input type="submit" value="用户注册"/>
         <a href="index.jsp"><input type="button" value="取消注册"></a>
     </form>
+</div>
 </body>
 </html>
 <script type="text/javascript">

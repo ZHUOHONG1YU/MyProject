@@ -5,23 +5,25 @@
   Time: 15:52
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isErrorPage="false" contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Users</title>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<div align="center">
+    <div style="padding: 0px 0px 0px 100px;height: 100%; width:100%;background-image: url('img/258.jpg')">
+    <div style="height: 60px; padding: 50px 0px 0px 360px">
     <h3>用户列表</h3>
+    </div>
         <table id="tab" border="1px gray" width="800px" style="text-align:center">
             <tr>
                 <td>编号</td><td>名称</td><td>密码</td>
                 <td>状态</td><td>类型</td><td>管理</td>
             </tr>
         </table>
-</div>
-        <a href="main.jsp" style="margin: 0px 0px 0px 105px"><input type="button" value="首页"></a>
+        <a href="main.jsp" ><input type="button" value="首页"></a>
+    </div>
 </body>
 </html>
 <script type="text/javascript">
