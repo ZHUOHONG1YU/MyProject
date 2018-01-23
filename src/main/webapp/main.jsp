@@ -18,8 +18,14 @@
         <h2>功能列表</h2>
     </div>
         <h4 style="color: red;">当前登录用户:${LoginUser.uname}
-            <c:if test="${LoginUser.utype==1}">
+            <c:if test="${LoginUser.utype==2}">
                 ,身份:超级管理员
+            </c:if>
+            <c:if test="${LoginUser.utype==1}">
+                ,身份:管理员
+            </c:if>
+            <c:if test="${LoginUser.utype==0}">
+                ,身份:普通用户
             </c:if>
         </h4>
         <ul>
