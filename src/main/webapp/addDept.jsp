@@ -14,7 +14,7 @@
     <title>addDept</title>
 </head>
 <body>
-    <h2>添加班级</h2>
+    <h2>添加部门</h2>
     <div style="font-size: 18px">
         <c:if test="${param.rtype==1}">
             <p style="color:green;">添加部门成功!</p>
