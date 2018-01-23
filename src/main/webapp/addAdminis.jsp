@@ -28,7 +28,8 @@
         用户名：&nbsp;<input name="uname" id="user-name"><span></span><br>
         密&nbsp;&nbsp;码：<input name="upwd" id="password1"><span></span><br>
         重复密码：<input name="upwd1" id="password2"><span></span><br/>
-        用户状态：<input name="utype" type="radio" value="1">超级管理员
+        用户状态：<input name="utype" type="radio" value="2">超级管理员
+        <input name="utype" type="radio" value="1">管理员
         <input name="utype" type="radio" value="0">普通用户<br/>
         <input type="submit" value="用户注册"/>
         <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="取消注册"></a>
