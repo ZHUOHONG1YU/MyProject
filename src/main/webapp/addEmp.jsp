@@ -27,15 +27,15 @@
                 <p style="color:red;">新员工入职失败!</p>
             </c:if>
         </div>
-        <form method="post" action="empAction/addEmp">
-            员工姓名:<input name="ename"/><br/>
-            员工年龄:<input name="eage"/><br/>
+        <form method="post" action="empAction/addEmp" onsubmit="return compare()">
+            员工姓名:<input name="ename" id="emp-name"/><span></span><br/>
+            员工年龄:<input name="eage" id="emp-age"/><span></span><br/>
             员工性别:<input type="radio" name="esex" value="1" checked/>男
                      <input type="radio" name="esex" value="0" />女<br/>
             员工爱好:<input type="checkbox" name="ehobby" value="阅读"/>阅读
                      <input type="checkbox" name="ehobby" value="体育"/>体育
                      <input type="checkbox" name="ehobby" value="学习"/>学习<br/>
-            入职时间:<input name="eintime"/><br/>
+            入职时间:<input name="eintime" id="emp-time"/><span></span><br/>
             入职部门:<select name="dno" >
                      <option value="">请选择部门</option>
                      </select><br/><br/>
@@ -57,4 +57,27 @@
             });
         });
     });
+
+        function compare() {
+            var a = document.getElementById('emp-name').value;
+            var b = document.getElementById('emp-age').value;
+            var c = document.getElementById('emp-time').value;
+            var d = '([0-9]{4})-([0-9]{2})-([0-9]{2})';
+            var preg = '^(1[89]|[2-8]\d|90)$';
+            if (a == null) {
+                $("span").text("员工姓名不能为空").css("color", "red");
+                return false;
+            }
+            if (a != preg) {
+                $("span").text("电话号码不能小于13位！").css("color", "red");
+                return false;
+            }
+            if(c!=d){
+                $("span").text("日期格式不正确！").css("color", "red");
+                return false;
+            }else {
+                return true;
+            }
+        }
 </script>
+

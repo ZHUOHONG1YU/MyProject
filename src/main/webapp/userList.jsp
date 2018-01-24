@@ -31,13 +31,13 @@
         $("#tab tr:not(:first)").remove();
         $.get("userAction/findUserList","",function(data){
             $.each(data,function(i,v){
-                if(!(v.utype==1||v.utype==2)){
+                if(!(v.utype==2)){
                     var tr="<tr>";
                     tr+="<td>"+(i+1)+"</td>";
                     tr+="<td>"+v.uname+"</td>";
-                    tr+="<td>"+'******'+"</td>";
+                    tr+="<td>"+v.upwd+"</td>";
                     tr+="<td>"+(v.ustatus==1?"正常":"销户")+"</td>";
-                    tr+="<td>"+(v.utype==1?"超级管理员":"普通用户")+"</td>";
+                    tr+="<td>"+(v.utype==1?"管理员":"普通用户")+"</td>";
                     tr+="<td><a href='#'>修改</a>|";
                     tr+="<a href=''>销户</a></td>";
                     tr+="</tr>";

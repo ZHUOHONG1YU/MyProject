@@ -12,6 +12,7 @@
 <html>
 <head>
     <title>addDept</title>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.2.1.min.js"></script>
 </head>
 <div style="padding: 0px 0px 0px 350px;height: 100%; width:100%;background-image: url('${pageContext.request.contextPath}/img/258.jpg')">
     <div style="height: 60px; padding: 50px 0px 0px 80px">
@@ -25,11 +26,27 @@
             <p style="color:red;">添加部门失败!</p>
         </c:if>
     </div>
-    <form method="post" action="deptAction/addDept">
-        部门名称:<input name="dname"/>
+    <form method="post" action="deptAction/addDept" onsubmit="return compare()">
+        <span></span><br>
+        部门名称:<input name="dname" id="dept-name"/>
         <input type="submit" value="添加部门"/>
     </form>
     <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="首页"></a>
 </div>
 </body>
 </html>
+<script type="text/javascript">
+    function compare() {
+        var a = document.getElementById('dept-name').value;
+        var preg='/^[\w]{4,10}$/u';
+        if(a.length < 4){
+            $("span").text("部门名称不能小于4位！").css("color","red");
+            return false;
+        }else if (a!=preg){
+            $("span").text("部门名称不能小于4位且不能写特殊符号！").css("color","red");
+            return false;
+        }else {
+            return true;
+        }
+    }
+</script>
