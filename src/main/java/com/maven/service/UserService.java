@@ -37,6 +37,17 @@ public class UserService {
 
     public boolean addUser(Users user){
         //调用dao层方法执行添加用户操作
+        //1，先查询该用户是否已经存在  user.getUname
+        /**
+         * if(!xxx.find(user.getName)){
+         *      return userDao.addUser(user);
+         * }
+         * reuturn fales;
+         */
+        List list = userDao.findUsersList(user.getUname());
+        if(list != null && list.size() > 0){
+            return  false;
+        }
         return userDao.addUser(user);
     }
     //查询所有用户
