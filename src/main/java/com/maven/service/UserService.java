@@ -44,7 +44,8 @@ public class UserService {
          * }
          * reuturn fales;
          */
-        List list = userDao.findUsersList(user.getUname());
+        String hql="from Users u where u.uname='"+user.getUname()+"'";
+        List list = userDao.findUsersList(hql);
         if(list != null && list.size() > 0){
             return  false;
         }

@@ -25,14 +25,15 @@
             <p style="color:red;">添加用户失败!</p>
         </c:if>
     </div>
-    <form method="post" action="userAction/addUser2" onsubmit="return compare()">
+      <div id="yh"></div>
+    <form method="post" action="userAction/addUser2">
         用户名称：<input name="uname" id="user-name"><span></span><br>
         输入密码：<input name="upwd" id="password1"><span></span><br>
         重复密码：<input name="upwd1" id="password2"><span></span><br/>
         用户状态：<input name="utype" type="radio" value="2">超级管理员
         <input name="utype" type="radio" value="1">管理员
         <input name="utype" type="radio" value="0">普通用户<br/><br/>
-        <input type="submit" value="用户注册"/>
+        <input type="button" value="用户注册" onclick="compare()"/>
         <a href="${pageContext.request.contextPath}/main.jsp"><input type="button" value="取消注册"></a>
     </form>
     <a href="main.jsp">
@@ -46,6 +47,8 @@
         var a = document.getElementById('password1').value;
         var b = document.getElementById('password2').value;
         var c = document.getElementById('user-name').value;
+
+        var param = $("form:eq(0)").serialize();
         if (c.length < 6) {
             $("span:eq(0)").text("用户名不能小于六位！").css("color","red");
             err_count += 1;
@@ -60,8 +63,17 @@
             err_count += 1;
         }
         if(err_count == 0){
-            return true;
+            $.post("userAction/addUser3",param,function(data){
+                //$.each(data, function (i,v) {
+                    if(!data) {
+                        $("span:eq(0)").text("用户名已存在！").css("color", "red");
+                        $("#yh").text("");
+                    }else {
+                        $("span:eq(0)").text("");
+                        $("#yh").text("添加成功！").css("color", "green");
+                    }
+                //})
+            });
         }
-        return false;
     }
 </script>

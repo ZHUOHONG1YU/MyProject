@@ -21,6 +21,12 @@ public class DeptService {
 
     //添加部门
     public boolean addDept(Dept dept){
+
+        String hql="from Dept d where d.dname='"+dept.getDname()+"'";
+        List list = deptDao.findDeptList(hql);
+        if(list != null && list.size() > 0){
+            return  false;
+        }
         return deptDao.addDept(dept);
     }
     //查询所有部门

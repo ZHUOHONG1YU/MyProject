@@ -29,7 +29,7 @@
         </div>
         <form method="post" action="empAction/addEmp" onsubmit="return compare()">
             员工姓名:<input name="ename" id="emp-name"/><span></span><br/>
-            员工年龄:<input name="eage" id="emp-age"/><span></span><br/>
+            员工年龄:<input name="eage"/><br/>
             员工性别:<input type="radio" name="esex" value="1" checked/>男
                      <input type="radio" name="esex" value="0" />女<br/>
             员工爱好:<input type="checkbox" name="ehobby" value="阅读"/>阅读
@@ -59,25 +59,23 @@
     });
 
         function compare() {
+
+            var err_count = 0;
             var a = document.getElementById('emp-name').value;
-            var b = document.getElementById('emp-age').value;
             var c = document.getElementById('emp-time').value;
-            var d = '([0-9]{4})-([0-9]{2})-([0-9]{2})';
-            var preg = '^(1[89]|[2-8]\d|90)$';
-            if (a == null) {
-                $("span").text("员工姓名不能为空").css("color", "red");
-                return false;
+            var d = /([0-9]{4})-([0-9]{2})-([0-9]{2})/;
+            if (a.length = 0) {
+                $("span:eq(0)").text("员工姓名不能为空").css("color", "red");
+                err_count+=1;
             }
-            if (a != preg) {
-                $("span").text("电话号码不能小于13位！").css("color", "red");
-                return false;
+            if(!d.test(c)){
+                $("span:eq(1)").text("日期格式不正确！").css("color", "red");
+                err_count+=1;
             }
-            if(c!=d){
-                $("span").text("日期格式不正确！").css("color", "red");
-                return false;
-            }else {
+            if(err_count == 0){
                 return true;
             }
+            return false;
         }
 </script>
 

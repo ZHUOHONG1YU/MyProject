@@ -55,6 +55,19 @@ public class UserAction {
         return "redirect:/addAdminis.jsp";
     }
 
+    @ResponseBody
+    @RequestMapping("/addUser3")
+    public boolean addUser3(Users users, RedirectAttributes attr) {
+        Boolean res;
+        if (userService.addUser(users)) {
+            res = true;
+        } else {
+            res = false;
+            //attr.addAttribute("rtype", "2");
+        }
+        return res;
+    }
+
     @RequestMapping("/findUserList")
     @ResponseBody
     public List findUserList(){

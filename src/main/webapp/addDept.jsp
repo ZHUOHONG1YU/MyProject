@@ -23,7 +23,7 @@
             <p style="color:green;">添加部门成功!</p>
         </c:if>
         <c:if test="${param.rtype==-1}">
-            <p style="color:red;">添加部门失败!</p>
+            <p style="color:red;">部门已存在，添加失败!</p>
         </c:if>
     </div>
     <form method="post" action="deptAction/addDept" onsubmit="return compare()">
@@ -37,16 +37,19 @@
 </html>
 <script type="text/javascript">
     function compare() {
+        var err_count = 0;
         var a = document.getElementById('dept-name').value;
-        var preg='/^[\w]{4,10}$/u';
+        var preg=/[A-Za-z0-9]{4,10}/;
         if(a.length < 4){
             $("span").text("部门名称不能小于4位！").css("color","red");
-            return false;
-        }else if (a!=preg){
+            err_count += 1;
+        }else if (!preg.test(a)){
             $("span").text("部门名称不能小于4位且不能写特殊符号！").css("color","red");
-            return false;
-        }else {
+            err_count += 1;
+        }
+        if(err_count == 0){
             return true;
         }
+        return false;
     }
 </script>
